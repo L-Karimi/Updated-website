@@ -1,0 +1,12 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Gold Star</title>
+  <desc>A smiling gold reward star</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .fill{fill:var(--accent)}
+  </style>
+  <polygon class="fill" points="128,20 156,96 236,96 172,144 196,224 128,178 60,224 84,144 20,96 100,96"/>
+  <path class="line" d="M96 120 C108 128,120 128,128 120"/>
+  <path class="line" d="M160 120 C148 128,136 128,128 120"/>
+  <path class="line" d="M100 150 C120 168,136 168,156 150"/>
+</svg>

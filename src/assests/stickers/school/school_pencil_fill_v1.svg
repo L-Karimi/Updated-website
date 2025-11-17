@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Pencil</title>
+  <desc>Writing pencil for school</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .wood{fill:#f59e0b}
+    .lead{fill:#4b5563}
+    .eraser{fill:#ef4444}
+  </style>
+  <rect class="wood" x="60" y="90" width="136" height="76" rx="8"/>
+  <polygon class="lead" points="196,90 220,128 196,166"/>
+  <rect class="eraser" x="60" y="106" width="24" height="44" rx="4"/>
+  <path class="line" d="M196 90 L220 128 L196 166"/>
+  <path class="line" d="M84 90 L84 166"/>
+  <path class="line" d="M60 128 H196"/>
+</svg>

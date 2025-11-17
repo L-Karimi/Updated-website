@@ -1,0 +1,15 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Happy Lion</title>
+  <desc>Smiling lion face with mane</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .mane{fill:var(--accent-2)}
+    .face{fill:var(--surface)}
+  </style>
+  <circle class="mane" cx="128" cy="128" r="80"/>
+  <circle class="face" cx="128" cy="128" r="56"/>
+  <circle class="line" cx="108" cy="118" r="4" fill="var(--ink)"/>
+  <circle class="line" cx="148" cy="118" r="4" fill="var(--ink)"/>
+  <path class="line" d="M112 144 C128 156,128 156,144 144"/>
+  <path class="line" d="M128 128 L128 138"/>
+</svg>

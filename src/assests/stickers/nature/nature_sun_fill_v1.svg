@@ -1,0 +1,21 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Bright Sun</title>
+  <desc>Cheerful sun for nature</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .sun{fill:var(--accent-2)}
+  </style>
+  <circle class="sun" cx="128" cy="128" r="56"/>
+  <circle class="line" cx="128" cy="128" r="56"/>
+  <path class="line" d="M128 20 L128 52"/>
+  <path class="line" d="M128 204 L128 236"/>
+  <path class="line" d="M20 128 L52 128"/>
+  <path class="line" d="M204 128 L236 128"/>
+  <path class="line" d="M48 48 L72 72"/>
+  <path class="line" d="M184 184 L208 208"/>
+  <path class="line" d="M208 48 L184 72"/>
+  <path class="line" d="M72 184 L48 208"/>
+  <circle cx="112" cy="116" r="6" fill="var(--ink)"/>
+  <circle cx="144" cy="116" r="6" fill="var(--ink)"/>
+  <path class="line" d="M108 140 Q128 152,148 140"/>
+</svg>

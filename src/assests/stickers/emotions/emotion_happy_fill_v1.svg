@@ -1,0 +1,13 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Happy Face</title>
+  <desc>Smiling happy emotion</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .face{fill:var(--accent)}
+  </style>
+  <circle class="face" cx="128" cy="128" r="96"/>
+  <circle class="line" cx="128" cy="128" r="96"/>
+  <circle cx="96" cy="112" r="8" fill="var(--ink)"/>
+  <circle cx="160" cy="112" r="8" fill="var(--ink)"/>
+  <path class="line" d="M88 144 Q128 184,168 144"/>
+</svg>

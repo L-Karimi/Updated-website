@@ -1,0 +1,22 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Curious Giraffe</title>
+  <desc>Giraffe with long neck and friendly expression</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .body{fill:var(--accent-2)}
+    .spots{fill:var(--accent)}
+  </style>
+  <ellipse class="body" cx="128" cy="80" rx="32" ry="40"/>
+  <rect class="body" x="112" y="100" width="32" height="80" rx="8"/>
+  <ellipse class="body" cx="128" cy="200" rx="48" ry="32"/>
+  <circle class="spots" cx="120" cy="70" r="6"/>
+  <circle class="spots" cx="136" cy="75" r="6"/>
+  <circle class="spots" cx="128" cy="120" r="8"/>
+  <circle class="spots" cx="120" cy="150" r="7"/>
+  <circle class="spots" cx="136" cy="160" r="7"/>
+  <rect class="body" x="106" y="40" width="6" height="16" rx="3"/>
+  <rect class="body" x="144" y="40" width="6" height="16" rx="3"/>
+  <circle class="line" cx="118" cy="62" r="3" fill="var(--ink)"/>
+  <circle class="line" cx="138" cy="62" r="3" fill="var(--ink)"/>
+  <path class="line" d="M122 72 C128 76,134 72,134 72"/>
+</svg>

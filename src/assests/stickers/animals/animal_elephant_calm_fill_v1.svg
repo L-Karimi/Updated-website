@@ -1,0 +1,14 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Calm Elephant</title>
+  <desc>Elephant head with ears and trunk</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .fill{fill:var(--accent)}
+    .face{fill:var(--surface)}
+  </style>
+  <ellipse class="fill" cx="128" cy="128" rx="90" ry="60"/>
+  <ellipse class="face" cx="128" cy="128" rx="50" ry="40"/>
+  <circle class="line" cx="112" cy="126" r="4" fill="var(--ink)"/>
+  <circle class="line" cx="144" cy="126" r="4" fill="var(--ink)"/>
+  <path class="line" d="M128 140 C128 170,110 172,110 184 C110 195,125 196,128 186"/>
+</svg>

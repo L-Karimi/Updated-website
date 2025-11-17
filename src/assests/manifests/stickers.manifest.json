@@ -1,0 +1,227 @@
+{
+  "pack": "qxp-stickers-playful",
+  "version": "1.0.0",
+  "license": "QXP-Internal",
+  "description": "ECDE-first playful sticker pack with token-tintable SVGs for QXP LMS",
+  "items": [
+    {
+      "id": "reward_star_gold_fill_v1",
+      "category": "rewards",
+      "type": "reward",
+      "tags": ["star", "gold", "reward", "badge", "achievement"],
+      "label": {
+        "en": "Gold Star",
+        "sw": "Nyota ya Dhahabu",
+        "fr": "Étoile d'Or",
+        "ar": "نجمة ذهبية"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/rewards/reward_star_gold_fill_v1.svg"
+    },
+    {
+      "id": "reward_ribbon_blue_fill_v1",
+      "category": "rewards",
+      "type": "reward",
+      "tags": ["ribbon", "medal", "blue", "reward", "achievement"],
+      "label": {
+        "en": "Blue Ribbon",
+        "sw": "Bendi ya Bluu",
+        "fr": "Ruban Bleu",
+        "ar": "شريط أزرق"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/rewards/reward_ribbon_blue_fill_v1.svg"
+    },
+    {
+      "id": "reward_medal_bronze_fill_v1",
+      "category": "rewards",
+      "type": "reward",
+      "tags": ["medal", "bronze", "third", "achievement"],
+      "label": {
+        "en": "Bronze Medal",
+        "sw": "Medali ya Shaba",
+        "fr": "Médaille de Bronze",
+        "ar": "ميدالية برونزية"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/rewards/reward_medal_bronze_fill_v1.svg"
+    },
+    {
+      "id": "animal_lion_happy_fill_v1",
+      "category": "animals",
+      "type": "animal",
+      "tags": ["lion", "happy", "smile", "mane", "safari"],
+      "label": {
+        "en": "Happy Lion",
+        "sw": "Simba Mwenye Furaha",
+        "fr": "Lion Joyeux",
+        "ar": "أسد سعيد"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/animals/animal_lion_happy_fill_v1.svg"
+    },
+    {
+      "id": "animal_elephant_calm_fill_v1",
+      "category": "animals",
+      "type": "animal",
+      "tags": ["elephant", "calm", "trunk", "ears"],
+      "label": {
+        "en": "Calm Elephant",
+        "sw": "Ndovu Mtulivu",
+        "fr": "Éléphant Calme",
+        "ar": "فيل هادئ"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/animals/animal_elephant_calm_fill_v1.svg"
+    },
+    {
+      "id": "animal_giraffe_curious_fill_v1",
+      "category": "animals",
+      "type": "animal",
+      "tags": ["giraffe", "curious", "neck", "spots"],
+      "label": {
+        "en": "Curious Giraffe",
+        "sw": "Twiga Mdadisi",
+        "fr": "Girafe Curieuse",
+        "ar": "زرافة فضولية"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/animals/animal_giraffe_curious_fill_v1.svg"
+    },
+    {
+      "id": "school_book_fill_v1",
+      "category": "school",
+      "type": "school",
+      "tags": ["book", "reading", "library", "school", "learn"],
+      "label": {
+        "en": "School Book",
+        "sw": "Kitabu cha Shuleni",
+        "fr": "Livre Scolaire",
+        "ar": "كتاب مدرسي"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/school/school_book_fill_v1.svg"
+    },
+    {
+      "id": "school_pencil_fill_v1",
+      "category": "school",
+      "type": "school",
+      "tags": ["pencil", "writing", "draw", "school", "stationery"],
+      "label": {
+        "en": "Pencil",
+        "sw": "Penseli",
+        "fr": "Crayon",
+        "ar": "قلم رصاص"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/school/school_pencil_fill_v1.svg"
+    },
+    {
+      "id": "emotion_happy_fill_v1",
+      "category": "emotions",
+      "type": "emotion",
+      "tags": ["happy", "smile", "joy", "feeling"],
+      "label": {
+        "en": "Happy",
+        "sw": "Furaha",
+        "fr": "Heureux",
+        "ar": "سعيد"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/emotions/emotion_happy_fill_v1.svg"
+    },
+    {
+      "id": "emotion_proud_fill_v1",
+      "category": "emotions",
+      "type": "emotion",
+      "tags": ["proud", "confident", "achievement", "feeling"],
+      "label": {
+        "en": "Proud",
+        "sw": "Kiburi",
+        "fr": "Fier",
+        "ar": "فخور"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/emotions/emotion_proud_fill_v1.svg"
+    },
+    {
+      "id": "nature_sun_fill_v1",
+      "category": "nature",
+      "type": "nature",
+      "tags": ["sun", "bright", "day", "weather"],
+      "label": {
+        "en": "Bright Sun",
+        "sw": "Jua Kali",
+        "fr": "Soleil Brillant",
+        "ar": "شمس مشرقة"
+      },
+      "variant": "fill",
+      "viewBox": "0 0 256 256",
+      "rtl_mirror": false,
+      "age": "ECDE",
+      "path": "assets/stickers/nature/nature_sun_fill_v1.svg"
+    }
+  ],
+  "categories": {
+    "rewards": {
+      "label": {"en": "Rewards & Badges", "sw": "Tuzo na Baji"},
+      "icon": "🏆",
+      "count": 3
+    },
+    "animals": {
+      "label": {"en": "Animals", "sw": "Wanyama"},
+      "icon": "🦁",
+      "count": 3
+    },
+    "school": {
+      "label": {"en": "School Life", "sw": "Maisha ya Shuleni"},
+      "icon": "📚",
+      "count": 2
+    },
+    "emotions": {
+      "label": {"en": "Feelings", "sw": "Hisia"},
+      "icon": "😊",
+      "count": 2
+    },
+    "nature": {
+      "label": {"en": "Nature", "sw": "Asili"},
+      "icon": "🌿",
+      "count": 1
+    }
+  },
+  "usage": {
+    "import": "Import SVGs directly in React components using ES6 imports",
+    "theming": "SVGs use CSS custom properties for token-based theming",
+    "accessibility": "All stickers include title and desc elements for screen readers"
+  }
+}

@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import MarketingWebsite from "./views/MarketingWebsite";
+import CoverPage from "./views/CoverPage";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentRoute, setCurrentRoute] = useState(() => window.location.hash || "");
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  // Handle hash route changes for marketing website and cover page
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentRoute(window.location.hash || "");
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  // Route to Marketing Website
+  if (currentRoute.startsWith("#/marketing")) {
+    return <MarketingWebsite />;
+  }
+
+  // Route to Cover Page (default when no hash or #/cover)
+  if (!currentRoute || currentRoute === "#/" || currentRoute === "#/cover" || currentRoute.startsWith("#/cover")) {
+    return <CoverPage />;
+  }
+
+  // For any other routes, show the marketing website
+  return <MarketingWebsite />;
 }
 
-export default App
+export default App;

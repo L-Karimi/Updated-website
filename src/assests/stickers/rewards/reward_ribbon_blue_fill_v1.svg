@@ -1,0 +1,13 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Blue Ribbon</title>
+  <desc>A round medal ribbon</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .fill{fill:var(--accent)}
+    .accent2{fill:var(--accent-2)}
+  </style>
+  <circle class="fill" cx="128" cy="96" r="56"/>
+  <path class="accent2" d="M104 150 L88 236 L128 208 L168 236 L152 150 Z"/>
+  <circle class="line" cx="128" cy="96" r="56"/>
+  <path class="line" d="M112 88 a16 16 0 0 0 32 0"/>
+</svg>

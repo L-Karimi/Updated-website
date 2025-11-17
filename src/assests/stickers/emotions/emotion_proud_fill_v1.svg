@@ -1,0 +1,14 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>Proud Face</title>
+  <desc>Proud confident emotion</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .face{fill:var(--accent-2)}
+  </style>
+  <circle class="face" cx="128" cy="128" r="96"/>
+  <circle class="line" cx="128" cy="128" r="96"/>
+  <path class="line" d="M88 108 L108 112"/>
+  <path class="line" d="M168 108 L148 112"/>
+  <path class="line" d="M96 152 L160 152"/>
+  <circle cx="128" cy="152" r="4" fill="var(--ink)"/>
+</svg>

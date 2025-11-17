@@ -1,0 +1,17 @@
+<svg viewBox="0 0 256 256" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <title>School Book</title>
+  <desc>Open book icon for school life</desc>
+  <style>
+    .line{stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .cover{fill:var(--accent-2)}
+    .page{fill:var(--surface)}
+  </style>
+  <path class="cover" d="M24 64 H120 C140 64,148 72,148 92 V204 C140 196,132 192,120 192 H24 Z"/>
+  <path class="cover" d="M232 64 H136 C116 64,108 72,108 92 V204 C116 196,124 192,136 192 H232 Z"/>
+  <path class="page" d="M120 80 H36 V180 H120 C132 180,140 188,148 196 V92 C148 80,136 80,120 80 Z"/>
+  <path class="page" d="M136 80 H220 V180 H136 C124 180,116 188,108 196 V92 C108 80,120 80,136 80 Z"/>
+  <path class="line" d="M60 108 H108"/>
+  <path class="line" d="M60 128 H108"/>
+  <path class="line" d="M148 108 H196"/>
+  <path class="line" d="M148 128 H196"/>
+</svg>
