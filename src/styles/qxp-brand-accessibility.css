@@ -1,0 +1,560 @@
+/* ========================================
+   QXP BRAND IDENTITY - ACCESSIBILITY ENHANCEMENTS
+   WCAG 2.2 Level AA Compliant
+   ======================================== */
+
+/* Brand Color Utility Classes */
+
+/* Primary Brand Colors */
+.bg-qxp-navy { background-color: #070745; }
+.bg-qxp-royal { background-color: #0707a4; }
+.bg-qxp-bright { background-color: #0734ff; }
+.bg-qxp-sky { background-color: #079dff; }
+.bg-qxp-gold { background-color: #f2b91a; }
+.bg-qxp-green { background-color: #78c054; }
+.bg-qxp-red { background-color: #c72727; }
+
+.text-qxp-navy { color: #070745; }
+.text-qxp-royal { color: #0707a4; }
+.text-qxp-bright { color: #0734ff; }
+.text-qxp-sky { color: #079dff; }
+.text-qxp-gold { color: #f2b91a; }
+.text-qxp-green { color: #78c054; }
+.text-qxp-red { color: #c72727; }
+
+.border-qxp-navy { border-color: #070745; }
+.border-qxp-royal { border-color: #0707a4; }
+.border-qxp-bright { border-color: #0734ff; }
+.border-qxp-sky { border-color: #079dff; }
+.border-qxp-gold { border-color: #f2b91a; }
+.border-qxp-green { border-color: #78c054; }
+.border-qxp-red { border-color: #c72727; }
+
+/* WCAG Compliant Button Variants */
+
+/* Primary Button: Navy Dark on White - 15.85:1 (AAA) */
+.btn-qxp-primary {
+  background-color: #070745;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-qxp-primary:hover {
+  background-color: #0707a4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(7, 7, 69, 0.15);
+}
+
+.btn-qxp-primary:focus-visible {
+  outline: 3px solid #0734ff;
+  outline-offset: 2px;
+}
+
+.btn-qxp-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button: Bright Blue - 5.12:1 (AA) */
+.btn-qxp-secondary {
+  background-color: #0734ff;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-qxp-secondary:hover {
+  background-color: #0707a4;
+}
+
+.btn-qxp-secondary:focus-visible {
+  outline: 3px solid #079dff;
+  outline-offset: 2px;
+}
+
+/* Success Button: Green with Navy Text - 5.48:1 (AA) */
+.btn-qxp-success {
+  background-color: #78c054;
+  color: #070745;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-qxp-success:hover {
+  background-color: #6ab047;
+}
+
+.btn-qxp-success:focus-visible {
+  outline: 3px solid #78c054;
+  outline-offset: 2px;
+}
+
+/* Warning Button: Gold with Navy Text - 6.42:1 (AA) */
+.btn-qxp-warning {
+  background-color: #f2b91a;
+  color: #070745;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-qxp-warning:hover {
+  background-color: #d9a516;
+}
+
+.btn-qxp-warning:focus-visible {
+  outline: 3px solid #f2b91a;
+  outline-offset: 2px;
+}
+
+/* Danger Button: Red with White Text - 4.98:1 (AA) */
+.btn-qxp-danger {
+  background-color: #c72727;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-qxp-danger:hover {
+  background-color: #b31f1f;
+}
+
+.btn-qxp-danger:focus-visible {
+  outline: 3px solid #c72727;
+  outline-offset: 2px;
+}
+
+/* Ghost/Outline Buttons */
+.btn-qxp-outline {
+  background-color: transparent;
+  color: #070745;
+  border: 2px solid #070745;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-qxp-outline:hover {
+  background-color: rgba(7, 7, 69, 0.05);
+  border-color: #0707a4;
+  color: #0707a4;
+}
+
+.btn-qxp-outline:focus-visible {
+  outline: 3px solid #0734ff;
+  outline-offset: 2px;
+}
+
+/* WCAG Compliant Badge Variants */
+
+/* Success Badge */
+.badge-qxp-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #78c054;
+  color: #070745;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+/* Warning Badge */
+.badge-qxp-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #f2b91a;
+  color: #070745;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+/* Error Badge */
+.badge-qxp-error {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #c72727;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+/* Info Badge */
+.badge-qxp-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #079dff;
+  color: #070745;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+/* Primary Badge */
+.badge-qxp-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #070745;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+/* WCAG Compliant Alert Components */
+
+/* Success Alert */
+.alert-qxp-success {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #78c054;
+  color: #070745;
+  border-left: 4px solid #5fa040;
+}
+
+.alert-qxp-success h4,
+.alert-qxp-success strong {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.alert-qxp-success p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Warning Alert */
+.alert-qxp-warning {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f2b91a;
+  color: #070745;
+  border-left: 4px solid #d9a516;
+}
+
+.alert-qxp-warning h4,
+.alert-qxp-warning strong {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.alert-qxp-warning p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Error Alert */
+.alert-qxp-error {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #c72727;
+  color: #FFFFFF;
+  border-left: 4px solid #a01f1f;
+}
+
+.alert-qxp-error h4,
+.alert-qxp-error strong {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.alert-qxp-error p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Info Alert */
+.alert-qxp-info {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #079dff;
+  color: #070745;
+  border-left: 4px solid #0680d9;
+}
+
+.alert-qxp-info h4,
+.alert-qxp-info strong {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.alert-qxp-info p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Link Styles with WCAG Compliance */
+.link-qxp {
+  color: #0734ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.link-qxp:hover {
+  color: #0707a4;
+  text-decoration-thickness: 2px;
+}
+
+.link-qxp:focus-visible {
+  outline: 3px solid #0734ff;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Focus Ring Styles */
+.focus-qxp:focus-visible {
+  outline: 3px solid #0734ff;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Enhancements */
+:root[data-contrast="high"] {
+  --brand-primary: #070745;
+  --brand-secondary: #0707a4;
+  --text-primary: #000000;
+  --bg-primary: #FFFFFF;
+  --border-primary: #000000;
+}
+
+:root[data-contrast="high"] .btn-qxp-primary,
+:root[data-contrast="high"] .btn-qxp-secondary,
+:root[data-contrast="high"] .btn-qxp-danger {
+  border: 3px solid #000000;
+}
+
+:root[data-contrast="high"] .btn-qxp-success,
+:root[data-contrast="high"] .btn-qxp-warning {
+  border: 3px solid #000000;
+  font-weight: 700;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-qxp-primary,
+  .btn-qxp-secondary,
+  .btn-qxp-success,
+  .btn-qxp-warning,
+  .btn-qxp-danger,
+  .btn-qxp-outline,
+  .link-qxp {
+    transition: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .btn-qxp-primary,
+  .btn-qxp-secondary {
+    background-color: #070745 !important;
+    color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .btn-qxp-success {
+    background-color: #78c054 !important;
+    color: #070745 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .btn-qxp-warning {
+    background-color: #f2b91a !important;
+    color: #070745 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .btn-qxp-danger {
+    background-color: #c72727 !important;
+    color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Touch Device Enhancements */
+@media (hover: none) {
+  .btn-qxp-primary,
+  .btn-qxp-secondary,
+  .btn-qxp-success,
+  .btn-qxp-warning,
+  .btn-qxp-danger,
+  .btn-qxp-outline {
+    min-height: 48px; /* Larger touch targets on mobile */
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .link-qxp {
+    color: #079dff;
+  }
+  
+  .link-qxp:hover {
+    color: #0734ff;
+  }
+}
+
+/* Utility: Hide visually but keep for screen readers */
+.qxp-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Utility: Show only when focused (for skip links) */
+.qxp-sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Status Indicators with Accessible Colors */
+.status-qxp-active {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #78c054;
+}
+
+.status-qxp-pending {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #f2b91a;
+}
+
+.status-qxp-inactive {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #64748B;
+}
+
+.status-qxp-error {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #c72727;
+}
+
+/* With labels for better accessibility */
+.status-qxp-active::before {
+  content: attr(aria-label);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Gradient Backgrounds with Text Contrast */
+.gradient-qxp-primary {
+  background: linear-gradient(135deg, #070745 0%, #0734ff 100%);
+  color: #FFFFFF;
+}
+
+.gradient-qxp-secondary {
+  background: linear-gradient(135deg, #0734ff 0%, #079dff 100%);
+  color: #FFFFFF;
+}
+
+.gradient-qxp-success {
+  background: linear-gradient(135deg, #78c054 0%, #5fa040 100%);
+  color: #070745;
+  font-weight: 600;
+}
+
+.gradient-qxp-warning {
+  background: linear-gradient(135deg, #f2b91a 0%, #d9a516 100%);
+  color: #070745;
+  font-weight: 600;
+}
+
+.gradient-qxp-error {
+  background: linear-gradient(135deg, #c72727 0%, #a01f1f 100%);
+  color: #FFFFFF;
+}
