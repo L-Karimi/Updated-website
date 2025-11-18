@@ -1,9 +1,10 @@
 /*
- QXP Cover Page - Marketing Website Entry Point
+ QXP Cover Page - Enhanced Role & Tenant Selection
  --------------------------------------------------
- - Clean entry point for the marketing website
- - Professional design with animations
- - Direct navigation to marketing sections
+ - Entry point for accessing either the Marketing Website or Platform
+ - Clean, professional design with animations
+ - Quick role-based navigation
+ - Seamless integration with Marketing Website
 */
 
 import React from "react";
@@ -20,68 +21,68 @@ import {
   Shield,
   Zap,
   CheckCircle2,
+  ExternalLink,
   Sparkles,
-  ChevronRight,
-  DollarSign,
-  MessageSquare,
-  Phone
+  ChevronRight
 } from "lucide-react";
 import { motion } from "motion/react";
 
-const MARKETING_SECTIONS = [
+const PLATFORM_ROLES = [
   {
-    id: "solutions",
-    title: "Solutions by Role",
-    description: "See how QXP helps every school role with real platform interfaces",
-    icon: Users,
-    route: "#/marketing/solutions",
+    id: "principal",
+    title: "Principal",
+    description: "Dashboard, approvals, curriculum, assessments",
+    icon: GraduationCap,
+    route: "#/?role=principal&view=dashboard",
     color: "bg-blue-500",
-    features: ["15 role-specific dashboards", "Live platform previews", "Persona workflows"]
   },
   {
-    id: "pricing",
-    title: "Pricing & Calculator",
-    description: "Transparent pricing with volume discounts and cost calculator",
-    icon: DollarSign,
-    route: "#/marketing/pricing",
+    id: "teacher",
+    title: "Teacher",
+    description: "Teaching, grading, attendance, communication",
+    icon: BookOpen,
+    route: "#/?role=teacher&view=dashboard",
     color: "bg-green-500",
-    features: ["Volume discounts", "Cost calculator", "All features included"]
   },
   {
-    id: "demo",
-    title: "Book a Demo",
-    description: "20-minute personalized walkthrough tailored to your needs",
-    icon: Phone,
-    route: "#/marketing/demo",
+    id: "student",
+    title: "Student / Learner",
+    description: "Learning, assignments, grades, resources",
+    icon: Users,
+    route: "#/?role=student&view=home",
     color: "bg-purple-500",
-    features: ["Personalized demo", "Platform walkthrough", "Q&A session"]
   },
   {
-    id: "features",
-    title: "Platform Features",
-    description: "Complete school management suite with 16+ modules",
-    icon: Building2,
-    route: "#/marketing",
+    id: "parent",
+    title: "Parent",
+    description: "Child's progress, fees, communication",
+    icon: Users,
+    route: "#/?role=parent&view=home",
     color: "bg-orange-500",
-    features: ["LMS & Academics", "Finance & Fees", "Communication", "Transport"]
   },
   {
-    id: "testimonials",
-    title: "Testimonials",
-    description: "See what 50+ schools say about using QXP every day",
-    icon: MessageSquare,
-    route: "#/marketing/testimonials",
-    color: "bg-teal-500",
-    features: ["Real school feedback", "Case studies", "Success stories"]
-  },
-  {
-    id: "contact",
-    title: "Contact Sales",
-    description: "Get in touch with our education specialists",
+    id: "admin",
+    title: "School Admin",
+    description: "ICT admin, users, system configuration",
     icon: Shield,
-    route: "#/marketing/contact",
+    route: "#/?role=school-admin&view=dashboard",
+    color: "bg-red-500",
+  },
+  {
+    id: "qxp-admin",
+    title: "QXP Admin",
+    description: "Platform control, tenants, monitoring",
+    icon: Building2,
+    route: "#/?role=qxp-admin&view=dashboard",
     color: "bg-indigo-500",
-    features: ["1 business day response", "WhatsApp support", "Email & phone"]
+  },
+  {
+    id: "government",
+    title: "Government",
+    description: "National oversight, reporting, analytics",
+    icon: Globe,
+    route: "#/?role=government&view=dashboard",
+    color: "bg-teal-500",
   },
 ];
 
@@ -115,21 +116,24 @@ export default function CoverPage() {
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <span className="text-primary-foreground font-bold text-lg">Q</span>
+              <svg className="h-6 w-6 text-primary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
             </motion.div>
             <div>
-              <div className="text-lg font-semibold">QXP LMS</div>
-              <div className="text-xs text-muted-foreground">School Operations Suite</div>
+              <div className="text-lg">QXP LMS</div>
+              <div className="text-xs text-muted-foreground">School Suite</div>
             </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <Button asChild size="sm">
-              <a href="https://wa.me/254700779977" target="_blank" rel="noreferrer">
-                <Phone className="h-4 w-4 mr-2" />
-                Chat on WhatsApp
+            <Button asChild variant="outline">
+              <a href="#/marketing">
+                <Globe className="h-4 w-4 mr-2" />
+                Marketing Website
+                <ExternalLink className="h-3 w-3 ml-2" />
               </a>
             </Button>
           </motion.div>
@@ -139,111 +143,132 @@ export default function CoverPage() {
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <Badge variant="outline" className="mb-6">
             <span className="inline-block h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse" />
-            Trusted by 50+ Top Schools in Kenya
+            Kenya's Leading School Operations Platform
           </Badge>
-          <h1 className="text-4xl sm:text-6xl tracking-tight mb-6">
-            Transform Your School with <span className="text-primary">QXP</span>
+          <h1 className="text-4xl sm:text-6xl tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+            Welcome to QXP
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Complete school operations suite for <strong>CBC, 8-4-4, BNC & IBE</strong>. 
-            Everything you need in one platform.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Comprehensive multi-tenant SaaS education platform supporting <strong>24 user roles</strong>,
+            <strong> CBC, 8-4-4, BNC & IBE</strong> curricula, with bilingual EN/SW support and full <strong>WCAG 2.2 AA</strong> accessibility.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button asChild size="lg">
-              <a href="#/marketing/demo">
-                Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="#/marketing/pricing">See Pricing</a>
-            </Button>
-          </div>
         </motion.div>
 
-        {/* Trust Indicators */}
+        {/* Quick Action Cards */}
         <motion.div 
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
+          className="grid sm:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
-          {[
-            { label: "Schools", value: "50+", icon: Building2 },
-            { label: "Students", value: "25k+", icon: Users },
-            { label: "Teachers", value: "2k+", icon: GraduationCap },
-            { label: "Curricula", value: "4", icon: BookOpen },
-          ].map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <motion.div key={stat.label} variants={fadeInUp} className="text-center">
-                <Card className="p-6 hover:shadow-lg transition">
-                  <Icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-                  <div className="text-2xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </Card>
-              </motion.div>
-            );
-          })}
+          <motion.div variants={fadeInUp}>
+            <Card 
+              className="p-8 hover:shadow-2xl hover:border-primary/50 transition cursor-pointer group bg-gradient-to-br from-card to-primary/5" 
+              onClick={() => window.location.hash = "#/marketing"}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition">
+                    <Globe className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl mb-1">Marketing Website</h3>
+                    <Badge variant="secondary">New visitor?</Badge>
+                  </div>
+                </div>
+                <ArrowRight className="h-6 w-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition" />
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Learn about QXP, explore solutions, view pricing, and book a demo
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <CheckCircle2 className="h-3 w-3" />
+                  Product tour
+                </span>
+                <span className="flex items-center gap-1">
+                  <CheckCircle2 className="h-3 w-3" />
+                  Pricing calculator
+                </span>
+                <span className="flex items-center gap-1">
+                  <CheckCircle2 className="h-3 w-3" />
+                  Book demo
+                </span>
+              </div>
+            </Card>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <Card className="p-8 bg-gradient-to-br from-primary/10 to-primary/5 border-primary/30 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-xl mb-1">Platform Access</h3>
+                  <Badge>Existing user?</Badge>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Select your role below to access your personalized dashboard
+              </p>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <Zap className="h-3 w-3 text-primary" />
+                <span>Quick access • Secure login • Multi-role support</span>
+              </div>
+            </Card>
+          </motion.div>
         </motion.div>
 
-        {/* Marketing Sections */}
+        {/* Role Selection */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl tracking-tight mb-3">
-              Explore QXP
+              Select Your Role
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Discover how QXP can transform your school operations with comprehensive features and role-specific solutions
+            <p className="text-muted-foreground">
+              Choose your role to access the appropriate dashboard and features
             </p>
           </div>
 
           <motion.div 
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
           >
-            {MARKETING_SECTIONS.map((section) => {
-              const Icon = section.icon;
+            {PLATFORM_ROLES.map((role) => {
+              const Icon = role.icon;
               return (
-                <motion.div key={section.id} variants={fadeInUp}>
+                <motion.div key={role.id} variants={fadeInUp}>
                   <Card
-                    className="p-6 hover:shadow-xl transition-all cursor-pointer group h-full border-2 border-transparent hover:border-primary/20"
-                    onClick={() => window.location.hash = section.route}
+                    className="p-6 hover:shadow-lg transition-all cursor-pointer group h-full border-0 bg-white hover:bg-gray-50"
+                    onClick={() => window.location.href = role.route}
                   >
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className={`${section.color} p-3 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform`}>
+                    <div className="flex items-center gap-4">
+                      <div className={`${role.color} p-4 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform`}>
                         <Icon className="h-6 w-6 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg mb-2">
-                          {section.title}
+                        <h3 className="font-semibold text-gray-900 mb-1">
+                          {role.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground mb-3">
-                          {section.description}
+                        <p className="text-sm text-gray-600 line-clamp-2">
+                          {role.description}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
-                    </div>
-                    
-                    <div className="space-y-1.5">
-                      {section.features.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <CheckCircle2 className="h-3 w-3 text-green-500 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
+                      <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
                     </div>
                   </Card>
                 </motion.div>
@@ -252,107 +277,109 @@ export default function CoverPage() {
           </motion.div>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* Platform Features */}
         <motion.div 
-          className="mt-20 text-center"
+          className="mt-24"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <Card className="p-12 bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 max-w-4xl mx-auto">
-            <Sparkles className="h-12 w-12 mx-auto mb-4 text-primary" />
-            <h3 className="text-2xl sm:text-3xl mb-4">Ready to Get Started?</h3>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join 50+ leading schools already using QXP. Book a personalized demo and see the platform in action.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild size="lg">
-                <a href="#/marketing/demo">
-                  Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="#/marketing/pricing">See Pricing</a>
-              </Button>
-              <Button asChild variant="ghost" size="lg">
-                <a href="https://wa.me/254700779977" target="_blank" rel="noreferrer">
-                  <Phone className="mr-2 h-4 w-4" />
-                  WhatsApp
-                </a>
-              </Button>
+          <Card className="p-8 bg-gradient-to-br from-card to-muted/30">
+            <div className="flex items-center gap-2 mb-6 justify-center">
+              <Sparkles className="h-5 w-5 text-primary" />
+              <h3 className="text-xl">Platform Highlights</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-3xl mb-2">24</div>
+                <div className="text-sm text-muted-foreground">User Roles</div>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-3xl mb-2">4</div>
+                <div className="text-sm text-muted-foreground">Curricula (CBC, 8-4-4, BNC, IBE)</div>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-3xl mb-2">14</div>
+                <div className="text-sm text-muted-foreground">KICD Files (PP1-Grade 12)</div>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-3xl mb-2">50K</div>
+                <div className="text-sm text-muted-foreground">Schools Capacity</div>
+              </motion.div>
             </div>
           </Card>
         </motion.div>
 
-        {/* Features Highlights */}
+        {/* System Info */}
         <motion.div 
-          className="mt-16 grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          className="mt-12 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.7 }}
         >
-          {[
-            {
-              icon: Zap,
-              title: "Fast Implementation",
-              description: "Most schools go live in 2-4 weeks with comprehensive onboarding"
-            },
-            {
-              icon: Shield,
-              title: "Bank-Grade Security",
-              description: "Your school's data is encrypted and fully compliant with Kenyan regulations"
-            },
-            {
-              icon: Globe,
-              title: "Multi-Curriculum Support",
-              description: "CBC, 8-4-4, British National Curriculum, and International Baccalaureate"
-            }
-          ].map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <Card key={index} className="p-6 text-center">
-                <Icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-                <h4 className="font-semibold mb-2">{feature.title}</h4>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
-              </Card>
-            );
-          })}
+          <div className="inline-flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
+            <span className="flex items-center gap-1.5">
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+              Multi-tenant SaaS
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="h-3 w-3" />
+              Bilingual EN/SW
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="h-3 w-3" />
+              WCAG 2.2 AA
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="h-3 w-3" />
+              Mobile Responsive
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="h-3 w-3" />
+              Light/Dark Mode
+            </span>
+          </div>
         </motion.div>
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-border mt-24 py-12 bg-muted/30">
+      <footer className="border-t border-border mt-24 py-8 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">Q</span>
-              </div>
-              <div className="text-lg font-semibold">QXP LMS</div>
-            </div>
-            <p className="text-muted-foreground max-w-md mx-auto">
-              Kenya's leading school operations suite, trusted by 50+ schools.
-            </p>
+          <div className="text-center text-sm text-muted-foreground mb-4">
+            <p>© {new Date().getFullYear()} QXP Global. All rights reserved.</p>
           </div>
-          
-          <div className="flex items-center justify-center gap-6 text-sm mb-6">
-            <a href="#/marketing/about" className="text-muted-foreground hover:text-foreground transition">
-              About
-            </a>
-            <a href="#/marketing/contact" className="text-muted-foreground hover:text-foreground transition">
-              Contact
-            </a>
+          <div className="flex items-center justify-center gap-4 text-sm">
             <a href="#/marketing/privacy" className="text-muted-foreground hover:text-foreground transition">
               Privacy
             </a>
+            <span className="text-muted-foreground">•</span>
             <a href="#/marketing/terms" className="text-muted-foreground hover:text-foreground transition">
               Terms
             </a>
-          </div>
-
-          <div className="text-center text-xs text-muted-foreground">
-            <p>© {new Date().getFullYear()} QXP Global. All rights reserved.</p>
-            <p className="mt-2">Made in Kenya 🇰🇪</p>
+            <span className="text-muted-foreground">•</span>
+            <a href="#/marketing/contact" className="text-muted-foreground hover:text-foreground transition">
+              Contact
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <a href="#/marketing/about" className="text-muted-foreground hover:text-foreground transition">
+              About
+            </a>
           </div>
         </div>
       </footer>
