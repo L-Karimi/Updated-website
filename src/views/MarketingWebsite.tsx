@@ -573,27 +573,29 @@ const staggerContainer = {
 // -----------------------------
 // Components
 // -----------------------------
-function Stat({
-  label,
-  value,
-  icon: Icon,
-}: {
-  label: string;
-  value: string;
-  icon?: any;
-}) {
+function Stat({ label, value, icon: Icon }: { label: string; value: string; icon?: any }) {
+  // Assign colors based on the stat
+  const colors = ['blue', 'green', 'purple', 'orange'];
+  const colorIndex = TRUST_STATS.findIndex(s => s.label === label) % colors.length;
+  const colorName = colors[colorIndex];
+  
+  const bgClass = `bg-${colorName}-50`;
+  const iconBgClass = `bg-${colorName}-500`;
+  const textClass = `text-${colorName}-600`;
+  const borderClass = `border-${colorName}-200`;
+  
   return (
     <motion.div
       variants={fadeInUp}
-      className="rounded-xl border border-border bg-card p-6 text-center hover:shadow-lg transition group"
+      className={`rounded-xl border ${borderClass} ${bgClass} p-6 text-center hover:shadow-lg transition group`}
     >
       {Icon && (
-        <div className="inline-flex p-4 rounded-2xl bg-primary mb-4 group-hover:scale-110 transition-transform shadow-sm">
+        <div className={`inline-flex p-4 rounded-2xl ${iconBgClass} mb-4 group-hover:scale-110 transition-transform shadow-sm`}>
           <Icon className="h-6 w-6 text-white" />
         </div>
       )}
-      <div className="text-3xl text-primary">{value}</div>
-      <div className="text-sm text-muted-foreground mt-1">{label}</div>
+      <div className={`text-3xl ${textClass}`}>{value}</div>
+      <div className="text-sm text-gray-600 mt-1">{label}</div>
     </motion.div>
   );
 }
