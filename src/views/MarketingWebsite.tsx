@@ -64,7 +64,7 @@ import {
   // Smartphone,
 } from "lucide-react";
 
-import logoHorizontal from '../assests/d30f90627223d61d5aded172077c692976a7bc43.png';
+import logoHorizontal from "../assests/d30f90627223d61d5aded172077c692976a7bc43.png";
 
 // -----------------------------
 // Config & Data
@@ -645,8 +645,11 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#/marketing" className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded">
-          <motion.img 
+        <a
+          href="#/marketing"
+          className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+        >
+          <motion.img
             src={logoHorizontal}
             alt="QXP Logo"
             className="h-8 w-auto"
