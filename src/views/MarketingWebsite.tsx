@@ -42,10 +42,10 @@ import {
   MessageSquare,
   Shield,
   Zap,
-  Globe,
-  Award,
+  // Globe,
+  // Award,
   TrendingUp,
-  Clock,
+  // Clock,
   DollarSign,
   Star,
   Quote,
@@ -59,9 +59,9 @@ import {
   FileText,
   HelpCircle,
   Briefcase,
-  BarChart3,
-  CheckSquare,
-  Smartphone,
+  // BarChart3,
+  // CheckSquare,
+  // Smartphone,
 } from "lucide-react";
 
 import logoHorizontal from '../assests/d30f90627223d61d5aded172077c692976a7bc43.png';
@@ -1189,7 +1189,7 @@ function Home() {
             "parent",
             "bursar",
             "registrar",
-          ].map((personaSlug, idx) => {
+          ].map((personaSlug) => {
             const persona = PERSONAS.find(
               (p) =>
                 p.slug === personaSlug ||
